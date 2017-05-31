@@ -7,14 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE12DBA21E6794E000281E0C /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12DBA11E6794E000281E0C /* JobViewController.swift */; };
+		FE36922E1ED4D95000DD4730 /* JobTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE36922D1ED4D95000DD4730 /* JobTableViewController.swift */; };
+		FE3692301ED75F6400DD4730 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE36922F1ED75F6400DD4730 /* ChartViewController.swift */; };
+		FE383DBA1EAA7695006DD2CD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE383DB91EAA7695006DD2CD /* Location.swift */; };
+		FE3C95F21E806CCF00CBC30A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3C95F11E806CCF00CBC30A /* MapKit.framework */; };
+		FE3C95F41E806F9500CBC30A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3C95F31E806F9500CBC30A /* ResultsViewController.swift */; };
 		FE48B6911E5D30E500775714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE48B6901E5D30E500775714 /* AppDelegate.swift */; };
 		FE48B6931E5D30E500775714 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE48B6921E5D30E500775714 /* ViewController.swift */; };
 		FE48B6961E5D30E500775714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE48B6941E5D30E500775714 /* Main.storyboard */; };
 		FE48B6981E5D30E500775714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE48B6971E5D30E500775714 /* Assets.xcassets */; };
 		FE48B69B1E5D30E500775714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE48B6991E5D30E500775714 /* LaunchScreen.storyboard */; };
+		FE6E5C231E9ED3A50002334B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E5C221E9ED3A50002334B /* SearchViewController.swift */; };
+		FE8AB0471E68E48E00A4F9C1 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8AB0461E68E48E00A4F9C1 /* Job.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE12DBA11E6794E000281E0C /* JobViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
+		FE36922D1ED4D95000DD4730 /* JobTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobTableViewController.swift; sourceTree = "<group>"; };
+		FE36922F1ED75F6400DD4730 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		FE383DB91EAA7695006DD2CD /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		FE3C95F11E806CCF00CBC30A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FE3C95F31E806F9500CBC30A /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		FE48B68D1E5D30E500775714 /* DollarTranscriptClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DollarTranscriptClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE48B6901E5D30E500775714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE48B6921E5D30E500775714 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +36,8 @@
 		FE48B6971E5D30E500775714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE48B69A1E5D30E500775714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE48B69C1E5D30E500775714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE6E5C221E9ED3A50002334B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FE8AB0461E68E48E00A4F9C1 /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE3C95F21E806CCF00CBC30A /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE3C95F01E806CCF00CBC30A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE3C95F11E806CCF00CBC30A /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE48B6841E5D30E500775714 = {
 			isa = PBXGroup;
 			children = (
 				FE48B68F1E5D30E500775714 /* DollarTranscriptClient */,
 				FE48B68E1E5D30E500775714 /* Products */,
+				FE3C95F01E806CCF00CBC30A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +80,8 @@
 		FE48B68F1E5D30E500775714 /* DollarTranscriptClient */ = {
 			isa = PBXGroup;
 			children = (
+				FE8AB0451E68DC6400A4F9C1 /* ViewControllers */,
+				FE8AB0441E68DC5800A4F9C1 /* Models */,
 				FE48B6901E5D30E500775714 /* AppDelegate.swift */,
 				FE48B6921E5D30E500775714 /* ViewController.swift */,
 				FE48B6941E5D30E500775714 /* Main.storyboard */,
@@ -62,6 +90,27 @@
 				FE48B69C1E5D30E500775714 /* Info.plist */,
 			);
 			path = DollarTranscriptClient;
+			sourceTree = "<group>";
+		};
+		FE8AB0441E68DC5800A4F9C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE8AB0461E68E48E00A4F9C1 /* Job.swift */,
+				FE383DB91EAA7695006DD2CD /* Location.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FE8AB0451E68DC6400A4F9C1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE12DBA11E6794E000281E0C /* JobViewController.swift */,
+				FE3C95F31E806F9500CBC30A /* ResultsViewController.swift */,
+				FE6E5C221E9ED3A50002334B /* SearchViewController.swift */,
+				FE36922D1ED4D95000DD4730 /* JobTableViewController.swift */,
+				FE36922F1ED75F6400DD4730 /* ChartViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +147,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = URMWQU63PG;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -137,8 +191,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6E5C231E9ED3A50002334B /* SearchViewController.swift in Sources */,
+				FE36922E1ED4D95000DD4730 /* JobTableViewController.swift in Sources */,
 				FE48B6931E5D30E500775714 /* ViewController.swift in Sources */,
 				FE48B6911E5D30E500775714 /* AppDelegate.swift in Sources */,
+				FE12DBA21E6794E000281E0C /* JobViewController.swift in Sources */,
+				FE3692301ED75F6400DD4730 /* ChartViewController.swift in Sources */,
+				FE3C95F41E806F9500CBC30A /* ResultsViewController.swift in Sources */,
+				FE8AB0471E68E48E00A4F9C1 /* Job.swift in Sources */,
+				FE383DBA1EAA7695006DD2CD /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = URMWQU63PG;
 				INFOPLIST_FILE = DollarTranscriptClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Dzonga-Prince-Tendai.DollarTranscriptClient";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,6 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = URMWQU63PG;
 				INFOPLIST_FILE = DollarTranscriptClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Dzonga-Prince-Tendai.DollarTranscriptClient";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +363,7 @@
 				FE48B6A11E5D30E500775714 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
