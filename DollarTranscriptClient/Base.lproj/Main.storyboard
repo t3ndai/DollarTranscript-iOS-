@@ -424,28 +424,27 @@
             </objects>
             <point key="canvasLocation" x="5053.125" y="1491.5492957746478"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Major Ranking Table View Controller-->
         <scene sceneID="wEC-rI-61L">
             <objects>
-                <tableViewController id="Cfd-w4-ElG" sceneMemberID="viewController">
+                <tableViewController id="Cfd-w4-ElG" customClass="MajorRankingTableViewController" customModule="DollarTranscriptClient" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sSW-6N-oVk">
                         <rect key="frame" x="0.0" y="0.0" width="304" height="134"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wWX-MQ-Fdm" customClass="MajorTableViewCell" customModule="DollarTranscriptClient" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MajorCell" id="wWX-MQ-Fdm" customClass="MajorTableViewCell" customModule="DollarTranscriptClient" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="304" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wWX-MQ-Fdm" id="Q0y-ti-x5c">
                                     <rect key="frame" x="0.0" y="0.0" width="304" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dwm-db-pGB">
-                                            <rect key="frame" x="8" y="8" width="42" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dwm-db-pGB">
+                                            <rect key="frame" x="8" y="8" width="288" height="27.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAT-4Q-6Kh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAT-4Q-6Kh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -453,6 +452,12 @@
                                             </subviews>
                                         </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Dwm-db-pGB" firstAttribute="leading" secondItem="Q0y-ti-x5c" secondAttribute="leadingMargin" id="OzV-KE-2zF"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Dwm-db-pGB" secondAttribute="bottom" id="aJZ-QZ-87z"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Dwm-db-pGB" secondAttribute="trailing" id="b5z-zz-1xu"/>
+                                        <constraint firstItem="Dwm-db-pGB" firstAttribute="top" secondItem="Q0y-ti-x5c" secondAttribute="topMargin" id="bKI-E3-leY"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="name" destination="TAT-4Q-6Kh" id="SEK-SR-JIO"/>
@@ -483,22 +488,44 @@
             </objects>
             <point key="canvasLocation" x="5880" y="1453.5211267605634"/>
         </scene>
-        <!--Table View Controller-->
+        <!--College Rankings Table View Controller-->
         <scene sceneID="Vd0-WV-31M">
             <objects>
-                <tableViewController id="QKi-gc-nrz" sceneMemberID="viewController">
+                <tableViewController id="QKi-gc-nrz" customClass="CollegeRankingsTableViewController" customModule="DollarTranscriptClient" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dmS-kU-5HL">
                         <rect key="frame" x="0.0" y="0.0" width="304" height="134"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Zyd-Tu-hHZ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CollegeCell" id="Zyd-Tu-hHZ" customClass="CollegeTableViewCell" customModule="DollarTranscriptClient" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="304" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zyd-Tu-hHZ" id="ONn-CW-2l6">
-                                    <rect key="frame" x="0.0" y="0.0" width="304" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="304" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRC-sI-fNx">
+                                            <rect key="frame" x="8" y="8" width="288" height="27.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQ7-Gk-xw6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="LRC-sI-fNx" firstAttribute="top" secondItem="ONn-CW-2l6" secondAttribute="topMargin" id="6KD-Mt-Uj6"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="LRC-sI-fNx" secondAttribute="bottom" id="IEY-rt-A8b"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="LRC-sI-fNx" secondAttribute="trailing" id="YFR-eZ-sNM"/>
+                                        <constraint firstItem="LRC-sI-fNx" firstAttribute="leading" secondItem="ONn-CW-2l6" secondAttribute="leadingMargin" id="bYo-hM-cSl"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="aQ7-Gk-xw6" id="cRC-KM-PAM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <userDefinedRuntimeAttributes>
@@ -744,21 +771,40 @@
             </objects>
             <point key="canvasLocation" x="4584.375" y="2291.1971830985917"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Area Rankings Table View Controller-->
         <scene sceneID="glB-o7-6i6">
             <objects>
-                <tableViewController id="ivj-G0-ASq" sceneMemberID="viewController">
+                <tableViewController id="ivj-G0-ASq" customClass="AreaRankingsTableViewController" customModule="DollarTranscriptClient" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mmn-V1-mbo">
                         <rect key="frame" x="0.0" y="0.0" width="304" height="134"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="e0c-B3-Ghp">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AreaCell" id="e0c-B3-Ghp">
                                 <rect key="frame" x="0.0" y="28" width="304" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e0c-B3-Ghp" id="Sru-NX-t2y">
-                                    <rect key="frame" x="0.0" y="0.0" width="304" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="304" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QV0-LU-jmH">
+                                            <rect key="frame" x="8" y="8" width="288" height="27.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ic-zM-2Z9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QV0-LU-jmH" firstAttribute="leading" secondItem="Sru-NX-t2y" secondAttribute="leadingMargin" id="9Js-3h-E1d"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="QV0-LU-jmH" secondAttribute="bottom" id="Mz2-d3-GMm"/>
+                                        <constraint firstItem="QV0-LU-jmH" firstAttribute="top" secondItem="Sru-NX-t2y" secondAttribute="topMargin" id="Wmg-Bd-tQn"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="QV0-LU-jmH" secondAttribute="trailing" id="eQK-oL-rrH"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -787,7 +833,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UWR-8i-vWB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5523.75" y="2056.1619718309857"/>
+            <point key="canvasLocation" x="5523.75" y="2055.6338028169016"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="Clv-7N-P8y">
