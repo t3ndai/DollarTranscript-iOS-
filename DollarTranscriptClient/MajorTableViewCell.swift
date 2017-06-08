@@ -12,11 +12,16 @@ class MajorTableViewCell: UITableViewCell {
 
     @IBOutlet weak var name: UILabel!
     
-    
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func update(with major: Major) {
+        
+        name.text = major.name
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,10 +32,4 @@ class MajorTableViewCell: UITableViewCell {
 
 }
 
-extension MajorTableViewCell {
-    struct Model {
-        let name: String
-        
-        
-    }
-}
+

@@ -31,12 +31,11 @@ class ChartViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
         loadJobs()
-        
-        
     }
+    
     
     override func viewDidDisappear(_ animated: Bool) {
         

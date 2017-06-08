@@ -9,6 +9,16 @@
 import UIKit
 
 class MajorRankingTableViewController: UITableViewController {
+    
+    var major = Major()
+    var majors = [Major](){
+        didSet{
+            OperationQueue.main.addOperation {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +29,17 @@ class MajorRankingTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        loadMajors()
+        tableView.reloadData()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        
+        majors = []
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -28,24 +49,41 @@ class MajorRankingTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        if section == 0 {
+            return 0
+        }else {
+            return majors.count
+        }
+        
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+     
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MajorCell", for: indexPath) as! MajorTableViewCell
+        
+        let major = majors[indexPath.row]
+        
+        cell.update(with: major)
+        
         return cell
     }
-    */
+    
+    func loadMajors() {
+        
+        major.allMajors { (majors) in
+            majors.forEach{ major in
+                self.majors.append(major)
+            }
+        }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

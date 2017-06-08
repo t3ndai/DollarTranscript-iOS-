@@ -9,6 +9,14 @@
 import UIKit
 
 class CollegeTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var name: UILabel!
+    
+    func update(with college: College) {
+        
+        name.text = college.name
+    }
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

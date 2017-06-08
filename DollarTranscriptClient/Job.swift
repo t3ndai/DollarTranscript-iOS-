@@ -89,7 +89,6 @@ extension Job {
         do {
             
             let jsonData = try JSONSerialization.data(withJSONObject: job.makeJson(), options: [.prettyPrinted])
-            print(String(data: jsonData, encoding: .utf8))
             
             if let jobUrl = jobURLComponents?.url {
                 var request = URLRequest(url: jobUrl)

@@ -11,13 +11,13 @@ import Foundation
 
 struct Major {
     
-    var name : String
+    var name : String = ""
     
     
 }
 extension Major {
     
-    static let urlComponents = URLComponents(string: "0.0.0.0:8080")
+    static let urlComponents = URLComponents(string: "http://0.0.0.0:8080")
     static let session = URLSession(configuration: .default)
     
     init(json: [String: Any]) throws {
@@ -55,7 +55,7 @@ extension Major {
                         
                         
                         majorsJson??.forEach{ major in
-                            
+
                             try? majors.append(Major(json: major))
                             
                         }
