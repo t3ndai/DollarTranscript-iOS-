@@ -11,7 +11,7 @@ import Foundation
 
 struct Area {
     
-    var name: String
+    var name: String = ""
     
 }
 extension Area {

@@ -11,7 +11,7 @@ import Foundation
 
 struct College {
     
-    var name : String
+    var name : String = ""
 }
 extension College {
     

@@ -10,8 +10,14 @@ import UIKit
 
 class AreaRankingsTableViewController: UITableViewController {
     
-    
-    var areas = [Area]()
+    let area = Area()
+    var areas = [Area](){
+        didSet{
+            OperationQueue.main.addOperation {
+                self.viewDidAppear(true)
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +27,24 @@ class AreaRankingsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+   
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        loadAreas()
+        tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        tableView.reloadData()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        
+        areas = []
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,15 +64,26 @@ class AreaRankingsTableViewController: UITableViewController {
         return areas.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaTableViewCell
 
-        // Configure the cell...
+        let area = areas[indexPath.row]
+        
+        cell.update(with: area)
 
         return cell
     }
-    */
+    
+    
+    func loadAreas() {
+        
+        area.allAreas { (areas) in
+            areas.forEach{ area in
+                self.areas.append(area)
+            }
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

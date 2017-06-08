@@ -14,11 +14,10 @@ class MajorRankingTableViewController: UITableViewController {
     var majors = [Major](){
         didSet{
             OperationQueue.main.addOperation {
-                self.tableView.reloadData()
+                self.viewDidAppear(true)
             }
         }
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +32,12 @@ class MajorRankingTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         loadMajors()
+
+        tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
         tableView.reloadData()
     }
     
@@ -55,11 +60,7 @@ class MajorRankingTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if section == 0 {
-            return 0
-        }else {
-            return majors.count
-        }
+        return majors.count
         
     }
 

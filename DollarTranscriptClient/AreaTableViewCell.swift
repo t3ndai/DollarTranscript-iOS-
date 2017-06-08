@@ -9,6 +9,15 @@
 import UIKit
 
 class AreaTableViewCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var name: UILabel!
+   
+    
+    func update(with area: Area) {
+        
+        name.text = area.name
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

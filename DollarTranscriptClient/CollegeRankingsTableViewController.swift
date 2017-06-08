@@ -10,7 +10,14 @@ import UIKit
 
 class CollegeRankingsTableViewController: UITableViewController {
     
-    var colleges = [College]()
+    var college = College()
+    var colleges = [College](){
+        didSet{
+            OperationQueue.main.addOperation {
+                self.viewDidAppear(true)
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +27,21 @@ class CollegeRankingsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadColleges()
+        tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        
+        colleges = []
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,15 +61,26 @@ class CollegeRankingsTableViewController: UITableViewController {
         return colleges.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CollegeCell", for: indexPath) as! CollegeTableViewCell
 
-        // Configure the cell...
+        let college = colleges[indexPath.row]
+        
+        cell.update(with: college)
 
         return cell
     }
-    */
+    
+    func loadColleges() {
+        
+        college.allColleges { (colleges) in
+            colleges.forEach{ college in
+                self.colleges.append(college)
+            }
+        }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
