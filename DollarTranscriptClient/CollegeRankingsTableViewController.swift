@@ -81,6 +81,17 @@ class CollegeRankingsTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        return tableView.dequeueReusableCell(withIdentifier: "CollegeHeader")
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return 44
+    }
+    
+    
 
     /*
     // Override to support conditional editing of the table view.

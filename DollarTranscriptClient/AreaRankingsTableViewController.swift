@@ -76,6 +76,16 @@ class AreaRankingsTableViewController: UITableViewController {
     }
     
     
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        return tableView.dequeueReusableCell(withIdentifier: "AreaHeader")
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return 44
+    }
+    
     func loadAreas() {
         
         area.allAreas { (areas) in

@@ -76,6 +76,16 @@ class MajorRankingTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        return tableView.dequeueReusableCell(withIdentifier: "MajorHeader")
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return 44
+    }
+    
     func loadMajors() {
         
         major.allMajors { (majors) in

@@ -32,7 +32,7 @@ public struct Job {
 
 extension Job {
     
-    static let urlComponents = URLComponents(string: "http://0.0.0.0:8080")
+    static let urlComponents = URLComponents(string: "https://adtdjvuzgt.localtunnel.me")
     static let session = URLSession(configuration: .default)
     
     init(json: [String: Any]) throws {
