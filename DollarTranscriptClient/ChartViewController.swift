@@ -25,6 +25,8 @@ class ChartViewController: UIViewController {
         }
     }
     
+    var salaries = [Int]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,12 +36,14 @@ class ChartViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         loadJobs()
+        loadSalaries()
     }
     
     
     override func viewDidDisappear(_ animated: Bool) {
         
         jobs = []
+        salaries = []
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,9 +55,7 @@ class ChartViewController: UIViewController {
     
     func drawChart() {
         
-        //use a completion handler to pass all job data ?? 
-        
-        let salaries = jobs.flatMap{ $0.pay}
+
         let width: CGFloat = view.frame.width
         let height: CGFloat = view.frame.height
         
@@ -66,7 +68,7 @@ class ChartViewController: UIViewController {
         let path = UIBezierPath()
         
         let chartYPoint = salaries.flatMap { CGFloat($0)*(chart.bounds.height / 100000) }
-        let spacing = 1 + chart.bounds.width / CGFloat(salaries.count)
+        let spacing = chart.bounds.width / CGFloat(salaries.count - 1 )
         
         path.move(to: CGPoint(x: spacing, y: chartYPoint.first ?? 0))
         var x: CGFloat = spacing
@@ -88,13 +90,7 @@ class ChartViewController: UIViewController {
     }
     
     func loadJobs() {
-        
-        /*job.allJobs(completion: { [unowned self] jobs in
-            
-            jobs.forEach{ job in
-                self.jobs.append(job)
-            }
-        })*/
+
         
         job.allJobs { (jobs) in
             jobs.forEach{ job in
@@ -103,6 +99,15 @@ class ChartViewController: UIViewController {
         }
     }
     
+    
+    func loadSalaries(){
+        
+        job.allSalaries { (salaries) in
+            salaries.forEach{ salary in
+                self.salaries.append(salary)
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation

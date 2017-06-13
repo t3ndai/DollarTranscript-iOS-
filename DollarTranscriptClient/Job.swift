@@ -32,7 +32,7 @@ public struct Job {
 
 extension Job {
     
-    static let urlComponents = URLComponents(string: "https://adtdjvuzgt.localtunnel.me")
+    static let urlComponents = URLComponents(string: "http://104.131.14.43")
     static let session = URLSession(configuration: .default)
     
     init(json: [String: Any]) throws {
@@ -149,6 +149,51 @@ extension Job {
                     }
                     
                     completion(jobs)
+                }).resume()
+                
+            }
+            
+        }
+        
+    }
+    
+    
+    func allSalaries(completion: @escaping ([Int]) -> Void) {
+        
+        
+        var jobsURLComponents = Job.urlComponents
+        jobsURLComponents?.path = "/salaries"
+        
+        
+        do {
+            
+            
+            if let jobsURL = jobsURLComponents?.url {
+                
+                
+                Job.session.dataTask(with: jobsURL, completionHandler:  { (data,response, error)  in
+                    
+                    var salaries = [Int]()
+                    
+                    if error != nil {
+                        return
+                    }
+                    else if let data = data {
+                        
+                        let salariesJson = try? JSONSerialization.jsonObject(with: data, options: [.mutableContainers]) as? [[String: Any]]
+                        
+                        
+                        
+                        salariesJson??.forEach{ salary in
+                            
+                            let salary = salary["pay"] as? Int
+                            salaries.append(salary ?? 0)
+                            
+                        }
+                        
+                    }
+                    
+                    completion(salaries)
                 }).resume()
                 
             }

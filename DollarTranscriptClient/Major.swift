@@ -17,7 +17,7 @@ struct Major {
 }
 extension Major {
     
-    static let urlComponents = URLComponents(string: "https://adtdjvuzgt.localtunnel.me")
+    static let urlComponents = URLComponents(string: "http://104.131.14.43")
     static let session = URLSession(configuration: .default)
     
     init(json: [String: Any]) throws {
