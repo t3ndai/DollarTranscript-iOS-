@@ -12,6 +12,7 @@ import Foundation
 struct Area {
     
     var name: String = ""
+    var average: String = ""
     
 }
 extension Area {
@@ -22,8 +23,10 @@ extension Area {
     init(json: [String: Any]) throws {
         
         guard let name = json["location"] as? String else { throw Serialization.missing("location") }
+        guard let average = json["average"] as? String else { throw Serialization.missing("average") }
         
         self.name = name
+        self.average = average
     }
     
     func allAreas(completion: @escaping ([Area]) -> Void) {

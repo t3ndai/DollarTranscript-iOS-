@@ -11,10 +11,14 @@ import UIKit
 class CollegeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var average: UILabel!
+    
     
     func update(with college: College) {
         
         name.text = college.name
+        average.text = String(format: "%.0f", Double(college.average) ?? 0)
+        
     }
     
 

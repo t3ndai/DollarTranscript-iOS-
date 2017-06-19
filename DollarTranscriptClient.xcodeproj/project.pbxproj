@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE12DBA21E6794E000281E0C /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12DBA11E6794E000281E0C /* JobViewController.swift */; };
 		FE32FBBA1EE86CEB0053C389 /* CollegeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32FBB91EE86CEB0053C389 /* CollegeTableViewCell.swift */; };
 		FE32FBBC1EE86CFC0053C389 /* MajorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32FBBB1EE86CFC0053C389 /* MajorTableViewCell.swift */; };
 		FE32FBBE1EE86D150053C389 /* AreaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32FBBD1EE86D150053C389 /* AreaTableViewCell.swift */; };
@@ -32,7 +31,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FE12DBA11E6794E000281E0C /* JobViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
 		FE32FBB91EE86CEB0053C389 /* CollegeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollegeTableViewCell.swift; sourceTree = "<group>"; };
 		FE32FBBB1EE86CFC0053C389 /* MajorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorTableViewCell.swift; sourceTree = "<group>"; };
 		FE32FBBD1EE86D150053C389 /* AreaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaTableViewCell.swift; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 		FE8AB0451E68DC6400A4F9C1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FE12DBA11E6794E000281E0C /* JobViewController.swift */,
 				FE3C95F31E806F9500CBC30A /* ResultsViewController.swift */,
 				FE6E5C221E9ED3A50002334B /* SearchViewController.swift */,
 				FE36922D1ED4D95000DD4730 /* JobTableViewController.swift */,
@@ -235,7 +232,6 @@
 				FE48B6931E5D30E500775714 /* ViewController.swift in Sources */,
 				FE48B6911E5D30E500775714 /* AppDelegate.swift in Sources */,
 				FE32FBCB1EE88CD70053C389 /* MajorRankingTableViewController.swift in Sources */,
-				FE12DBA21E6794E000281E0C /* JobViewController.swift in Sources */,
 				FE3692301ED75F6400DD4730 /* ChartViewController.swift in Sources */,
 				FE3C95F41E806F9500CBC30A /* ResultsViewController.swift in Sources */,
 				FE32FBC51EE8878A0053C389 /* Area.swift in Sources */,

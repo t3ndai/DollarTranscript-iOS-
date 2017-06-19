@@ -12,19 +12,22 @@ import Foundation
 struct Major {
     
     var name : String = ""
+    var average: String = ""
     
     
 }
 extension Major {
     
-    static let urlComponents = URLComponents(string: "http://104.131.14.43")
+    static let urlComponents = URLComponents(string: "http://104.131.14.43") //"http://104.131.14.43"
     static let session = URLSession(configuration: .default)
     
     init(json: [String: Any]) throws {
         
         guard let name = json["major"] as? String else { throw Serialization.missing("major") }
+        guard let average = json["average"] as? String else { throw Serialization.missing("average") }
         
         self.name = name
+        self.average = average
     }
     
     

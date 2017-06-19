@@ -11,11 +11,15 @@ import UIKit
 class MajorTableViewCell: UITableViewCell {
 
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var average: UILabel!
+    
     
 
     func update(with major: Major) {
         
         name.text = major.name
+        average.text = String(format: "%.0f", Double(major.average) ?? 0)
+    
     }
     
     override func awakeFromNib() {

@@ -12,17 +12,20 @@ import Foundation
 struct College {
     
     var name : String = ""
+    var average: String = ""
 }
 extension College {
     
-    static let urlComponents = URLComponents(string: "http://104.131.14.43")
+    static let urlComponents = URLComponents(string: "http://104.131.14.43") //"http://104.131.14.43"
     static let session = URLSession(configuration: .default)
     
     init(json: [String: Any]) throws {
         
         guard let name = json["college"] as? String else { throw Serialization.missing("college") }
+        guard let average = json["average"] as? String else { throw Serialization.missing("average") }
         
         self.name = name
+        self.average = average
     }
     
     func allColleges(completion: @escaping ([College]) -> Void) {

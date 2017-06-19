@@ -12,11 +12,15 @@ class AreaTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var average: UILabel!
+    
    
     
     func update(with area: Area) {
         
         name.text = area.name
+        average.text = String(format: "%.0f", Double(area.average) ?? 0 )
+        
     }
 
     override func awakeFromNib() {
