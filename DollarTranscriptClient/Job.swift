@@ -32,7 +32,7 @@ public struct Job {
 
 extension Job {
     
-    static let urlComponents = URLComponents(string: "http://104.131.14.43")
+    static let urlComponents = URLComponents(string: "http://pathele.com")
     static let session = URLSession(configuration: .default)
     
     init(json: [String: Any]) throws {
@@ -206,7 +206,7 @@ extension Job {
         
         var jobTitles = [String]()
         var jobURLComponents = Job.urlComponents
-        jobURLComponents?.path = "/jobs/find"
+        jobURLComponents?.path = "/jobs/search"
         
         do {
             let jsonData = try? JSONSerialization.data(withJSONObject: query, options: .prettyPrinted)

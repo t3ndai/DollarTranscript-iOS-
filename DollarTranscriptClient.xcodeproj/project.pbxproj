@@ -28,6 +28,7 @@
 		FE48B69B1E5D30E500775714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE48B6991E5D30E500775714 /* LaunchScreen.storyboard */; };
 		FE6E5C231E9ED3A50002334B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E5C221E9ED3A50002334B /* SearchViewController.swift */; };
 		FE8AB0471E68E48E00A4F9C1 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8AB0461E68E48E00A4F9C1 /* Job.swift */; };
+		FEAEE2851F12BBC000997C18 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAEE2841F12BBC000997C18 /* SearchResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		FE48B69C1E5D30E500775714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE6E5C221E9ED3A50002334B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FE8AB0461E68E48E00A4F9C1 /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		FEAEE2841F12BBC000997C18 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				FE32FBC61EE88C910053C389 /* AreaRankingsTableViewController.swift */,
 				FE32FBC81EE88CAD0053C389 /* CollegeRankingsTableViewController.swift */,
 				FE32FBCA1EE88CD70053C389 /* MajorRankingTableViewController.swift */,
+				FEAEE2841F12BBC000997C18 /* SearchResultsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				FE32FBBA1EE86CEB0053C389 /* CollegeTableViewCell.swift in Sources */,
 				FE36922E1ED4D95000DD4730 /* JobTableViewController.swift in Sources */,
 				FE48B6931E5D30E500775714 /* ViewController.swift in Sources */,
+				FEAEE2851F12BBC000997C18 /* SearchResultsViewController.swift in Sources */,
 				FE48B6911E5D30E500775714 /* AppDelegate.swift in Sources */,
 				FE32FBCB1EE88CD70053C389 /* MajorRankingTableViewController.swift in Sources */,
 				FE3692301ED75F6400DD4730 /* ChartViewController.swift in Sources */,
